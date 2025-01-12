@@ -1,0 +1,59 @@
+{
+  "name": "Apple",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": ".",
+  "dependencies": {
+    "@gsap/react": "^2.1.1",
+    "@mediapipe/tasks-vision": "^0.10.18",
+    "@react-three/drei": "^9.119.0",
+    "@react-three/fiber": "^8.17.10",
+    "@sentry/react": "^8.48.0",
+    "gsap": "^3.12.5",
+    "lucide-react": "^0.468.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0",
+    "react-scripts": "5.0.1",
+    "three": "^0.171.0",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build && npm run sentry:sourcemaps",
+    "build:local": "react-scripts build",
+    "start:local": "react-scripts start",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "sentry:sourcemaps": "sentry-cli sourcemaps inject --org omid-my-trianing-project --project javascript-react ./build && sentry-cli sourcemaps upload --org omid-my-trianing-project --project javascript-react ./build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      "defaults",
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15"
+  }
+}
